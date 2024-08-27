@@ -56,7 +56,7 @@ export const projectsData = [
   },
   {
     id: 6,
-    image: '/projects/Airbnbori.jpg',
+    image: '/projects/airbnbori.jpg',
     category: 'Full-stack',
     github: 'https://github.com/hanzla-sib/H.Hotle-Booking',
     live: '',
