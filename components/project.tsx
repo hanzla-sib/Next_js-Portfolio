@@ -47,7 +47,7 @@ export const Project = ({
           )}
           {live && (
             <Link href={live ? live : ''}>
-              <Button variant={'secondary'}>Live</Button>
+              <Button variant={'secondary'}></Button>
             </Link>
           )}
           {link2 && (
