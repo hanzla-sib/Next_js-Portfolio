@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 import { projectsData } from '@/lib/data'
 import { useScroll, useTransform, motion } from 'framer-motion'
+import { Button } from './ui/button'
 
 type ProjectProps = (typeof projectsData)[number]
 
@@ -12,7 +13,10 @@ export const Project = ({
   title,
   image,
   category,
-  description
+  description,
+  github,
+  live,
+  link2
 }: ProjectProps) => {
   const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
@@ -35,9 +39,27 @@ export const Project = ({
         <h5 className='text-sm font-medium capitalize'>{category}</h5>
         <h3 className='mt-4 text-[40px] font-light'>{title}</h3>
         <p className='mb-4 mt-4 max-w-xl'>{description}</p>
+        <div className='flex gap-4'>
+          {github && (
+            <Link href={github ? github : ''}>
+              <Button variant={'secondary'}>Github</Button>
+            </Link>
+          )}
+          {live && (
+            <Link href={live ? live : ''}>
+              <Button variant={'secondary'}>Live</Button>
+            </Link>
+          )}
+          {link2 && (
+            <Link href={link2 ? link2 : ''}>
+              {' '}
+              <Button variant={'secondary'}>Demo</Button>
+            </Link>
+          )}
+        </div>
       </div>
-      <div className='flex rotate-20 items-center justify-center rounded-[50px] outline-[3px] outline-offset-8 outline-blue transition-all hover:outline'>
-        <Link href='/'>
+      <div className='rotate-20 flex items-center justify-center rounded-[50px] outline-[3px] outline-offset-8 outline-blue transition-all hover:outline'>
+        <Link href={github ? github : ''}>
           <Image
             src={image}
             width={390}

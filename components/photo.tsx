@@ -15,14 +15,14 @@ const Photo = () => {
         }}
       >
         {/* image profile */}
-        
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
             transition: { delay: 0.3, duration: 0.4, ease: 'easeIn' }
           }}
-          className='absolute left-[40px]  top-[100px] z-40'
+          className='absolute sm:top-[46px] md:top-[100px] z-40 sm:left-[100px] lg:left-[125px]'
         >
           <Image
             src='/hero/avatar.png'
@@ -48,7 +48,7 @@ const Photo = () => {
               repeatType: 'reverse',
               delay: 1
             }}
-            className='h-[300px] w-[300px] lg:h-[537px] lg:w-[537px]'
+            className='sm:h-[437px] sm:w-[437px] lg:h-[537px] lg:w-[537px]'
             viewBox='0 0 537 537'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
