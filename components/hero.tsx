@@ -13,15 +13,16 @@ const Hero = () => {
           <div className='text-center xl:text-left'>
             <span>Hello i&apos;m</span>
             <h1 className='text-[40px] font-bold capitalize leading-[3rem]'>
-              rachid <br />
-              <span className='under-line'>Amgoun</span>
+              Hanzla <br />
+              <span className='under-line'>Sibghat</span>
             </h1>
             <div className='py-8'>
               <p>
-                I have the perfect solution for your web development needs. By
-                adopting a modern stack, like MERN, and incorporating TypeScript
-                for enhanced type safety, we can create an exceptional web
-                application.
+                I specialize in leveraging modern technologies like the MERN
+                stack and TypeScript to build robust, scalable web applications
+                with a focus on type safety and performance. My approach ensures
+                the delivery of high-quality solutions that meet the dynamic
+                needs of today's digital landscape.
               </p>
             </div>
             <div className='mt-4 flex flex-col items-center justify-center xl:flex-row xl:justify-start xl:space-x-8'>

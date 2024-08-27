@@ -1,18 +1,25 @@
 import { FaGithub, FaYoutube, FaStackOverflow } from 'react-icons/fa'
+import { ImLinkedin } from 'react-icons/im'
+import { FaHackerrank } from 'react-icons/fa6'
+
 import Link from 'next/link'
 
 const socialLinks = [
   {
     icon: <FaGithub />,
-    path: 'https://github.com/amgoun'
+    path: 'https://github.com/hanzla-sib'
   },
   {
     icon: <FaYoutube />,
-    path: 'https://www.youtube.com/channel/UCbsnQ_ADchMvoOYgbrPsfFw'
+    path: 'https://www.youtube.com/@hanzlasib3615'
   },
   {
-    icon: <FaStackOverflow />,
-    path: 'https://stackoverflow.com/users/8044017/amgoun'
+    icon: <ImLinkedin />,
+    path: 'https://www.linkedin.com/in/hanzla-sibghat-369883219/'
+  },
+  {
+    icon: <FaHackerrank />,
+    path: 'https://www.hackerrank.com/profile/hanzlasib'
   }
 ]
 const Social = () => {

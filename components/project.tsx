@@ -36,12 +36,12 @@ export const Project = ({
         <h3 className='mt-4 text-[40px] font-light'>{title}</h3>
         <p className='mb-4 mt-4 max-w-xl'>{description}</p>
       </div>
-      <div className='flex rotate-45 items-center justify-center rounded-[50px] outline-[3px] outline-offset-8 outline-blue transition-all hover:outline'>
+      <div className='flex rotate-20 items-center justify-center rounded-[50px] outline-[3px] outline-offset-8 outline-blue transition-all hover:outline'>
         <Link href='/'>
           <Image
             src={image}
-            width={360}
-            height={360}
+            width={390}
+            height={390}
             alt='project image'
             className='inset-0 z-50 rounded-[50px] bg-cover transition-all hover:translate-x-[18px] hover:-rotate-45 hover:shadow-lg'
           />

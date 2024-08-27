@@ -15,20 +15,21 @@ const Photo = () => {
         }}
       >
         {/* image profile */}
+        
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
             transition: { delay: 0.3, duration: 0.4, ease: 'easeIn' }
           }}
-          className='absolute z-40'
+          className='absolute left-[40px]  top-[100px] z-40'
         >
           <Image
-            src='/hero/profile.png'
-            height={580}
-            width={580}
+            src='/hero/avatar.png'
+            height={280}
+            width={280}
             alt='profile'
-            className='inset-0 z-40 object-contain xl:translate-y-[3px]'
+            // className='inset-0 z-40 object-contain xl:translate-y-[3px]'
           />
         </motion.div>
         <motion.div

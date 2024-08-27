@@ -15,29 +15,18 @@ const Services = () => {
             viewport={{ once: true, amount: 0.8 }}
             className='justify-betweenlg:mr-8 flex w-full flex-col lg:w-1/2'
           >
-            <h1 className='pb-4 text-[40px] font-bold leading-[3rem]'>
-              What We do i help?
+            <h1 className='pb-4 text-[40px] font-bold leading-[3rem] text-center'>
+              What I Do
             </h1>
-            <p>
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old.
-            </p>
+
             <div className='flex justify-between space-x-4 py-8'>
-              <div className='flex flex-col items-center justify-center'>
+              
+              <div className='flex flex-col items-center justify-center w-full'>
+                
                 <p className='text-lg font-semibold uppercase'> Projects</p>
                 <p className='text-[36px] font-bold text-blue'>
                   {' '}
-                  + <AnimatedCounter from={0} to={45} />
-                </p>
-              </div>
-              <div className='flex flex-col items-center justify-center'>
-                <p className='text-lg font-semibold uppercase'>
-                  {' '}
-                  satisfied client
-                </p>
-                <p className='text-[36px] font-bold text-blue'>
-                  <AnimatedCounter from={0} to={25} />
+                  + <AnimatedCounter from={0} to={20} />
                 </p>
               </div>
             </div>
@@ -56,8 +45,11 @@ const Services = () => {
                   Front-end development
                 </h2>
                 <p>
-                  Covert your Figma/XD design to full responsive web app with
-                  react/next js or angular or HTML with tailwind css
+                  Specializing in converting design prototypes into dynamic,
+                  responsive web applications using modern frameworks and
+                  libraries like React/Next.js, Angular, and Tailwind CSS. I
+                  ensure seamless user experiences and optimal performance
+                  across all devices.
                 </p>
               </div>
             </div>
@@ -65,11 +57,13 @@ const Services = () => {
               <p className='text-6xl font-bold text-blue'>02</p>
               <div>
                 <h2 className='mb-2 text-2xl font-bold'>
-                  Back-end development
+                Back-end development
                 </h2>
                 <p>
-                  buid your full web app with cutting-edge web development
-                  technologies
+                  Expert in developing scalable and secure server-side solutions
+                  with the latest technologies. I handle everything from API
+                  development to database management, providing robust backend
+                  systems that support complex web applications.
                 </p>
               </div>
             </div>
