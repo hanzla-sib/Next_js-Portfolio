@@ -23,7 +23,7 @@ export const projectsData = [
   },
   {
     id: 3,
-    image: '/projects/food.png',
+    image: '/projects/food.PNG',
     category: 'Front End',
     github: 'https://github.com/hanzla-sib/H.Eats',
     live: 'https://hanzla-sib.github.io/H.Eats/',
