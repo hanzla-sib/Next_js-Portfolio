@@ -37,24 +37,30 @@ const Contact = () => {
       toast.error('Please fill the form')
     } else {
       setBool(true)
-      const d = await sendMail({
-        from: data.from,
-        name: data.name,
-        subject: data.subject,
-        body: data.body
-      })
-      if (d === 'success') {
-        setData({
-          from: '',
-          name: '',
-          subject: '',
-          body: ''
+      if (data.from.includes('@')) {
+        const d = await sendMail({
+          from: data.from,
+          name: data.name,
+          subject: data.subject,
+          body: data.body
         })
-        setBool(false)
-        toast.success('Email Sent')
+
+        if (d === 'success') {
+          setData({
+            from: '',
+            name: '',
+            subject: '',
+            body: ''
+          })
+          setBool(false)
+          toast.success('Email Sent')
+        } else {
+          setBool(false)
+          toast.error('Error occur')
+        }
       } else {
         setBool(false)
-        toast.error('Error occur')
+        toast.error('Email format is not correct')
       }
     }
   }
