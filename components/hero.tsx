@@ -28,7 +28,7 @@ const Hero = () => {
             <div className='mt-4 flex flex-col items-center justify-center xl:flex-row xl:justify-start xl:space-x-8'>
               <div className='flex gap-x-2'>
                 <Link
-                  href='https://drive.google.com/file/d/1inCgqOrybSd15PEmmlNirG-LHEDPpzm1/view'
+                  href='https://drive.google.com/file/d/1rQpGH9-DMWg2A1Z7UJP7uT7hRBpOYAgl/view?usp=sharing'
                   target='_blank'
                   className='flex items-center space-x-2 rounded-full border-2 border-blue px-6 py-3 font-medium uppercase text-blue transition-all hover:bg-blue/80 hover:text-lighted'
                 >
