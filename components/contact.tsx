@@ -1,11 +1,64 @@
 'use client'
-
-import { Send } from 'lucide-react'
-import React from 'react'
+import { Toaster } from '@/components/ui/sonner'
+import { Loader, Send } from 'lucide-react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-
+import { toast } from 'sonner'
 import FadeIn from '@/lib/variants'
+import { sendMail } from '@/lib/mail'
+import { Button } from './ui/button'
+
 const Contact = () => {
+  const [data, setData] = useState({
+    from: '',
+    name: '',
+    subject: '',
+    body: ''
+  })
+
+  const [bool, setBool] = useState(false)
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target
+    setData(prevData => ({
+      ...prevData,
+      [name]: value
+    }))
+  }
+
+  const Sendmsg = async () => {
+    if (
+      data.name === '' ||
+      data.subject === '' ||
+      data.body === '' ||
+      data.from === ''
+    ) {
+      toast.error('Please fill the form')
+    } else {
+      setBool(true)
+      const d = await sendMail({
+        from: data.from,
+        name: data.name,
+        subject: data.subject,
+        body: data.body
+      })
+      if (d === 'success') {
+        setData({
+          from: '',
+          name: '',
+          subject: '',
+          body: ''
+        })
+        setBool(false)
+        toast.success('Email Sent')
+      } else {
+        setBool(false)
+        toast.error('Error occur')
+      }
+    }
+  }
+
   return (
     <section id='Contact' className='bg-[url(/contact/contact-bg.png)] py-28'>
       <div className='px6 container flex flex-col justify-between py-12 text-lg md:flex-row'>
@@ -28,26 +81,52 @@ const Contact = () => {
           className='flex max-w-3xl flex-1 flex-col items-start gap-y-8 rounded-md bg-secondary/80 p-10'
         >
           <input
-            type='text'
-            placeholder='your name '
+            type='email'
+            name='from' // Add the name attribute
+            placeholder='Your Email'
             required
+            value={data.from}
+            onChange={handleChange}
             className='w-full border-b border-white/25 bg-transparent py-3 outline-none transition-all placeholder:text-white/50 focus:border-blue/25'
           />
           <input
             type='text'
-            placeholder='subject '
+            name='name' // Add the name attribute
+            placeholder='Your Name'
             required
+            value={data.name}
+            onChange={handleChange}
+            className='w-full border-b border-white/25 bg-transparent py-3 outline-none transition-all placeholder:text-white/50 focus:border-blue/25'
+          />
+          <input
+            type='text'
+            name='subject' // Add the name attribute
+            placeholder='Subject'
+            required
+            value={data.subject}
+            onChange={handleChange}
             className='w-full border-b border-white/25 bg-transparent py-3 outline-none transition-all placeholder:text-white/50 focus:border-blue/25'
           />
           <textarea
-            name='message'
-            id='message'
+            name='body' // Add the name attribute
+            placeholder='Message'
+            value={data.body}
+            onChange={handleChange}
             className='mb-12 w-full resize-none border-b border-white/25 bg-transparent py-12 outline-none transition-all placeholder:text-white/50 focus:border-blue/25'
           ></textarea>
-          <button className='w-50 mt-12 flex items-center justify-between gap-x-2 rounded-full bg-blue px-4 py-3 transition-all duration-300 hover:bg-lighted hover:text-secondary hover:transition-all'>
-            <p className='text-md capitalize'> Send Messsage</p>
-            <Send className='h-5 w-5' />
-          </button>
+          {bool ? (
+            <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>
+              <Loader className='h-16 w-16 animate-spin text-white' />
+            </div>
+          ) : (
+            <div
+              onClick={() => Sendmsg()}
+              className='flex cursor-pointer items-center justify-center gap-3 rounded-lg border bg-white p-3 font-bold text-black hover:bg-[#336dff] hover:text-white'
+            >
+              <Send className='h-5 w-5' />
+              SEND
+            </div>
+          )}
         </motion.form>
       </div>
     </section>
