@@ -24,8 +24,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-# .env*
-# !.env.example
+.env*
+!.env.example
 
 # vercel
 .vercel
@@ -38,5 +38,5 @@ next-env.d.ts
 .java-version
 
 # Used by previous versions of JEnv
-# /.env
-# .env
+/.env
+.env
