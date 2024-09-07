@@ -5,6 +5,13 @@ import Image from 'next/image'
 import Nav from '@/components/nav'
 import MobileNav from '@/components/mobileNav'
 
+const menu = [
+
+  {
+    name: 'Hire me',
+    href: 'Contact'
+  }
+]
 const Header = () => {
   return (
     <header className='fixed z-50 w-full bg-primary py-6 xl:py-8'>
@@ -17,14 +24,21 @@ const Header = () => {
         {/* disktop nav */}
         <div className='hidden items-center gap-x-8 xl:flex'>
           <Nav />
-          <Link
-            to='/'
-            spy={true}
-            smooth={true}
-            className='text-md rounded-full bg-blue px-6 py-2 font-medium text-white transition-all hover:bg-blue/80'
-          >
-            Hire me
-          </Link>
+          {menu.map((item, index) => (
+        <Link
+          to={item.href}
+          spy={true}
+          smooth={true}
+          key={index}
+          
+            className='cursor-pointer text-md rounded-full bg-blue px-6 py-2  text-white transition-all hover:bg-blue/80 text-lg font-medium capitalize'
+         
+        >
+          <span className='pb-2 transition-all hover:border-b-2 hover:border-black hover:text-black'>
+            {item.name}
+          </span>
+        </Link>
+      ))}
         </div>
         {/* mobile nav */}
         <div className='z-50 xl:hidden'>
