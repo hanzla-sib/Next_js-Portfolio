@@ -15,7 +15,7 @@ export const projectsData = [
     image: '/projects/lingo.png',
     category: 'Full Stack',
     github: 'https://github.com/hanzla-sib/Duolingo-CLone',
-    live: '',
+    live: 'https://vercel.com/hanzlasibs-projects/duolingo-c-lone',
     link2: '',
     title: 'lingo Clone (next JS)',
     description:
