@@ -17,7 +17,7 @@ export const projectsData = [
     github: 'https://github.com/hanzla-sib/Duolingo-CLone',
     live: 'https://duolingo-c-lone.vercel.app/',
     link2: '',
-    title: 'lingo Clone (next JS)',
+    title: 'lingo (next JS)',
     description:
       'Created a full-stack Duolingo clone offering interactive tutorials for multiple languages, incorporating a customizable content management system to add and update language lessons easily.'
   },
@@ -61,9 +61,9 @@ export const projectsData = [
     github: 'https://github.com/hanzla-sib/H.Hotle-Booking',
     live: '',
     link2: 'https://youtu.be/MSRv4ToY9nQ',
-    title: 'Airbnb Clone (MERN)',
+    title: 'Airbnb (MERN)',
     description:
-      'Created a full-stack Airbnb clone using the MERN stack, featuring property listings, user authentication, and booking management, providing a seamless and scalable platform for vacation rentals.'
+      'Created a full-stack Airbnb using the MERN stack, featuring property listings, user authentication, and booking management, providing a seamless and scalable platform for vacation rentals.'
   },
   {
     id: 7,
