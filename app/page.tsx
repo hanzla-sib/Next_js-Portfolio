@@ -8,7 +8,9 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <main>
-      <Hero />
+      <section id='Hero'>
+        <Hero />
+      </section>
       <Services />
       <Work />
       <FAQ />
