@@ -1,19 +1,35 @@
 export const projectsData = [
   {
-    id: 1,
     image: '/projects/remcare.png',
     category: 'Full Stack Final Year Project',
     title: 'Remote Care (Android + Web + Iot)',
-    github: 'https://github.com/hanzla-sib/Duolingo-CLone',
+    github: 'https://github.com/hanzla-sib/Remote-Care-Web',
+    github1: 'https://github.com/hanzla-sib/SMD_PROJECT_REMOTECARE',
+    github2: 'https://github.com/hanzla-sib/RemoteCare_Watch',
     live: '',
+    Inprogress: false,
+
     link2: 'https://www.youtube.com/watch?v=eiOggXuPx6M&ab_channel=HanzlaSib',
     description:
       'Developed a full-stack app, Remote Care, integrating IoT to monitor patient health and facilitate real-time communication with doctors, enhancing remote healthcare services'
   },
   {
-    id: 2,
+    image: '/projects/finance.png',
+    category: 'Full Stack',
+    Inprogress: true,
+
+    github: 'https://github.com/hanzla-sib/Next_finance',
+    live: '',
+    link2: '',
+    title: 'Finance App (next JS)',
+    description:
+      'A simple finance app is designed to help users manage their personal finances by tracking income, expenses, and budgeting.'
+  },
+  {
     image: '/projects/lingo.png',
     category: 'Full Stack',
+    Inprogress: true,
+
     github: 'https://github.com/hanzla-sib/Duolingo-CLone',
     live: 'https://duolingo-c-lone.vercel.app/',
     link2: '',
@@ -22,8 +38,9 @@ export const projectsData = [
       'Created a full-stack Duolingo clone offering interactive tutorials for multiple languages, incorporating a customizable content management system to add and update language lessons easily.'
   },
   {
-    id: 3,
     image: '/projects/food.PNG',
+    Inprogress: false,
+
     category: 'Front End',
     github: 'https://github.com/hanzla-sib/H.Eats',
     live: 'https://hanzla-sib.github.io/H.Eats/',
@@ -33,9 +50,23 @@ export const projectsData = [
       'Developed a responsive React front-end for a food delivery app, featuring intuitive UI/UX design, real-time order tracking, and seamless integration with backend services for efficient food ordering.'
   },
   {
-    id: 4,
+    image: '/projects/spring.png',
+    category: 'Backend',
+    Inprogress: true,
+
+    github: 'https://github.com/hanzla-sib/SpringBoot-Tuts',
+    live: '',
+    link2: '',
+    title: 'SpringBoot Tutorial',
+    description:
+      'This tutorial covers the fundamentals of Spring Boot, including setting up your development environment, creating RESTful APIs, integrating databases, and securing your applications with Spring Security. Whether you are a beginner or an experienced Java developer, this tutorial provides hands-on examples and step-by-step guidance to help you master Spring Boot s powerful features.'
+  },
+
+  {
     image: '/projects/Twitter.jpg',
     category: 'Full-stack',
+    Inprogress: false,
+
     title: 'Twitter Clone Next.js+Tailwind',
     github: 'https://github.com/hanzla-sib/Twitter-2.0',
     live: 'https://twitter-2-0-nu.vercel.app/',
@@ -44,9 +75,10 @@ export const projectsData = [
       'Built a Twitter clone using Next.js and Firebase, offering real-time updates, user authentication, and dynamic content feeds, replicating key social media functionalities with efficient server-side rendering.'
   },
   {
-    id: 5,
     image: '/projects/dashboard.png',
     category: 'Frontend',
+    Inprogress: false,
+
     title: 'React-DashBoard',
     github: 'https://github.com/hanzla-sib/React-Dashboard',
     live: '',
@@ -55,9 +87,10 @@ export const projectsData = [
       'Developed a dynamic React dashboard featuring various types of interactive graphs and charts, enabling comprehensive data visualization and real-time analytics for enhanced decision-making.'
   },
   {
-    id: 6,
     image: '/projects/airbnbori.jpg',
     category: 'Full-stack',
+    Inprogress: false,
+
     github: 'https://github.com/hanzla-sib/H.Hotle-Booking',
     live: '',
     link2: 'https://youtu.be/MSRv4ToY9nQ',
@@ -66,9 +99,10 @@ export const projectsData = [
       'Created a full-stack Airbnb using the MERN stack, featuring property listings, user authentication, and booking management, providing a seamless and scalable platform for vacation rentals.'
   },
   {
-    id: 7,
     image: '/projects/remover.jpg',
     category: 'Full-stack',
+    Inprogress: false,
+
     title: 'React Background Remover',
     github: 'https://github.com/hanzla-sib/React-Background_remover',
     live: '',
@@ -77,9 +111,10 @@ export const projectsData = [
       'Developed a React application for image background removal, utilizing advanced algorithms for precise and efficient background extraction, offering a user-friendly interface for seamless editing.'
   },
   {
-    id: 8,
     image: '/projects/graph__2.jpeg',
     category: 'terminal + backend',
+    Inprogress: false,
+
     title: 'Network Analysis (C++)',
     github: 'https://github.com/hanzla-sib/Network-Analysis-C-',
     live: '',
@@ -88,9 +123,10 @@ export const projectsData = [
       'Developed a C++ application for large-scale network analysis, capable of efficiently processing and analyzing graphs with millions of nodes, ranging from 100,000 to 1,000,000, optimizing performance for complex data structures.'
   },
   {
-    id: 9,
     image: '/projects/atm.png',
     category: 'Terminal app exe',
+    Inprogress: false,
+
     title: 'ATM Machine (OOP)',
     github: 'https://github.com/hanzla-sib/ATM-MACHINE-OOP',
     live: '',
@@ -99,8 +135,9 @@ export const projectsData = [
       'Built an ATM system with a C++ backend, featuring a terminal-based interface and a file-based database for secure transaction processing, account management, and user authentication.'
   },
   {
-    id: 10,
     image: '/projects/candy.png',
+    Inprogress: false,
+
     category: 'Open GL C++',
     title: 'Candy Crush (OOP)',
     github: 'https://github.com/hanzla-sib/Candy-Crush-C-',
@@ -110,9 +147,10 @@ export const projectsData = [
       'Developed a C++ Candy Crush clone using OpenGL, featuring interactive gameplay, smooth animations, and an intuitive user interface, delivering a visually engaging and responsive gaming experience.'
   },
   {
-    id: 11,
     image: '/projects/Dodge.png',
     category: 'Open GL C++',
+    Inprogress: false,
+
     title: 'Dodge EM (C++)',
     github: 'https://github.com/hanzla-sib/Dodge_em-game',
     live: '',
@@ -121,9 +159,10 @@ export const projectsData = [
       'Developed a C++ Dodge EM car game clone using OpenGL, featuring interactive gameplay, smooth animations, and an intuitive user interface, delivering a visually engaging and responsive gaming experience.'
   },
   {
-    id: 12,
     image: '/projects/pipes.png',
     category: 'Operating System C',
+    Inprogress: false,
+
     title: 'Restaurant Management (C lang OS)',
     github: 'https://github.com/hanzla-sib/restaurant-management-system-c-',
     live: '',
@@ -132,9 +171,10 @@ export const projectsData = [
       'Designed a restaurant terminal application in C, utilizing operating system pipes and both blocking and non-blocking techniques to manage real-time orders and system interactions efficiently.'
   },
   {
-    id: 13,
     image: '/projects/db.png',
     category: 'Full-stack PHP',
+    Inprogress: false,
+
     title: 'NGO School DB System',
     github: 'https://github.com/hanzla-sib/NGO-SCHOOL-DATABASE-SYSTEM',
     live: '',
@@ -143,9 +183,10 @@ export const projectsData = [
       'Developed a full-stack PHP application for an NGO system, incorporating a robust database backend to manage donor information, fundraising campaigns, and volunteer activities, streamlining operations and enhancing organizational efficiency.'
   },
   {
-    id: 14,
     image: '/projects/veteran.jpg',
     category: 'Full-stack',
+    Inprogress: false,
+
     title: 'Veteran Meet (MERN)',
     github: 'https://github.com/hanzla-sib/VeteranMeet-Mern-Stack',
     live: '',
@@ -154,9 +195,10 @@ export const projectsData = [
       'Created a full-stack MERN application for a veteran meet platform, similar to Facebook, featuring user profiles, event management, and social networking capabilities, designed to facilitate connections and support among veterans.'
   },
   {
-    id: 15,
     image: '/projects/scraper.png',
     category: 'backend',
+    Inprogress: false,
+
     title: 'Daraz Scrapper (Python and Mysql)',
     github: 'https://github.com/hanzla-sib/Daraz_Scrapper',
     live: '',
